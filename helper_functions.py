@@ -2,7 +2,7 @@
 #
 # Author: Prashant Malani <p.malani@gmail.com
 
-filename = 'sample_list.txt'
+filename = 'sowpods.txt'
 
 #Dictionary to look up score of words
 dict_scores = { "a": 1, "c": 3, "b": 3, "e": 1, "d": 2,
@@ -35,7 +35,6 @@ def valid_words(word_list, rack):
 
   # Iterate through every word, and see it can be made from rack
   for word in word_list:
-    print word
     valid = True
     used_indices = []
     temp_rack = list(rack)
@@ -62,3 +61,6 @@ def score_word(word):
   for let in list_letters:
     score += dict_scores[let]
   return score
+
+def score_tuple(tuple):
+  return tuple[1]
